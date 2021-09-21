@@ -28,6 +28,7 @@ def create_user(request, start_response, name):
     body = 'Followed {name}'.format(name=name)
     return [body.encode('utf-8')]
 
+
 if __name__ == '__main__':
     httpd = make_server('', 8000, app)
     httpd.serve_forever()
